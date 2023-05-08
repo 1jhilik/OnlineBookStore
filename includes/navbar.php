@@ -13,10 +13,14 @@
         <li class="nav-item">
           <a class="nav-link" href="categories.php">Categories</a>
         </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="publisher_list.php">Publishers</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="cart.php">Cart</a>
         </li>
-        
+       
         
         <?php
           if(isset($_SESSION['auth']))
@@ -24,16 +28,17 @@
             
             ?>
             <li class="nav-item">
-          <a class="nav-link" href="my-order.php">My Orders</a>
+          
           </li>
               <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <i class="fa fa-user"></i>
               <?= $_SESSION['auth_user']['name']; ?>
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="my-order.php">My Orders</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li><a class="dropdown-item" href="logout.php">Logout </a></li>
+              
             </ul>
             </li>
             <?php
@@ -53,7 +58,11 @@
         ?>
         
         
-      </ul>  
+      </ul> 
+      <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> 
     </div>
   </div>
 </nav>

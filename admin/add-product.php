@@ -37,7 +37,7 @@ include('includes/header.php');
                   </select>
               </div>
               <div class="col-md-6">
-                  <label class="mb-0">Name</label>
+                  <label class="mb-0">Product Name</label>
                   <input type="text" required name="name" placeholder="Enter Product Name" class="form-control mb-2">
               </div>
               <div class="col-md-6">
@@ -45,11 +45,11 @@ include('includes/header.php');
                   <input type="text" required name="slug" placeholder="Enter slug" class="form-control mb-2">
               </div>
               <div class="col-md-12">
-                  <label  class="mb-0">Small Description</label>
+                  <label  class="mb-0">Author</label>
                   <textarea rows="3" required name="small description" placeholder="Enter small description" class="form-control mb-2"></textarea>
               </div>
               <div class="col-md-12">
-                  <label class="mb-0">Description</label>
+                  <label class="mb-0">Products Description</label>
                   <textarea rows="5" required name="description" placeholder="Enter description" class="form-control mb-2"></textarea>
               </div>
               <div class="col-md-6">
@@ -79,11 +79,11 @@ include('includes/header.php');
               </div>
               </div>
               <div class="col-md-12">
-                  <label class="mb-0">Meta Title</label>
+                  <label class="mb-0">publishers</label>
                   <input type="text" required name="meta_title" placeholder="Enter meta title" class="form-control mb-2">
               </div>
               <div class="col-md-12">
-                  <label class="mb-0">Meta Description</label>
+                  <label class="mb-0">Products Detail</label>
                   <textarea rows="3" required name="meta_description" placeholder="Enter meta description" class="form-control mb-2"></textarea>
               </div>
               <div class="col-md-12">

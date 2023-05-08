@@ -25,6 +25,11 @@
         height: 400px;
 
       }
+      
+      .checked {
+        color: orange;
+      }
+
     </style>
    
   </head>

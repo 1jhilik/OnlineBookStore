@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 
       var id = $(this).val();
-      // alert(id);
+      alert(id);
 
       swal({
         title: "Are you sure?",

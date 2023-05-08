@@ -29,6 +29,7 @@ include('includes/header.php');
                                     <div class="card-body w-100">
                                       <img src="uploads/<?= $item['image']; ?>" alt="Category Image" class="w-100" id="card-img">
                                       <h4 class="text-center text-black pt-2"><?= $item['name']; ?></h4>
+                                      
                                     </div>
                                   </div>
                                 </a>

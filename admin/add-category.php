@@ -14,7 +14,7 @@ include('includes/header.php');
           <form action="code.php" method="POST" enctype="multipart/form-data">
             <div class="row">
               <div class="col-md-6">
-                  <label for="">Name</label>
+                  <label for="">Categories Name</label>
                   <input type="text" name="name" placeholder="Enter Categories Name" class="form-control">
               </div>
               <div class="col-md-6">
@@ -30,11 +30,11 @@ include('includes/header.php');
                   <input type="file" name="image" class="form-control">
               </div>
               <div class="col-md-12">
-                  <label for="">Meta Title</label>
+                  <label for="">Book's Name</label>
                   <input type="text" name="meta_title" placeholder="Enter meta title" class="form-control">
               </div>
               <div class="col-md-12">
-                  <label for="">Meta Description</label>
+                  <label for="">Meta description</label>
                   <textarea rows="3" name="meta_description" placeholder="Enter meta description" class="form-control"></textarea>
               </div>
               <div class="col-md-12">

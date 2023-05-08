@@ -40,7 +40,14 @@ if(isset($_GET['product']))
                 <span class="float-start text-danger"><?php if($product['trending']){echo "Trending";} ?></span>
             </h4>
             <p class="text-primary "><?= $product['small_description'];?></p>
-              
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    
+                    <a href="view-review.php">reviews</a><a href="functions/addreview.php">ss</a>
+                    
               <hr>
               <div class="row">
               <div class="col-md-6">
@@ -69,107 +76,58 @@ if(isset($_GET['product']))
                 </div>
               </div>
               <hr>
-              <h6>Product Description:</h6>
+              <h6 class="fw-bold">Product Description:</h6>
               <p><?= $product['description'];?></p>
+              
+              <p><?= $product['meta_keywords'];?></p>
+              <h6 class="fw-bold">Product Details:</h6>
+              <p><?= $product['meta_description'];?></p>
+              
               
             </div>
           </div>
+          
         </div>
       </div> 
-<!-- <div class="container ">
-  <div class="row">
-    <div class="col-md-6 ">
-      <div class="card mt-5">
-        <div class="card-header bg-danger">
-          <h4 class="text-white">Add Review</h4>
-        </div>
-        <div class="card-body">
-          <form action="code.php" method="POST" enctype="multipart/form-data">
-            <div class="row">
-            <div class="col-md-12">
-            <form action="code.php" method="POST">
-                  <label class="mb-0">Rating</label>
-                  <select name="review_id" class="form-select mb-2" >
-                    <option selected>Select Rating</option>
-                      <option value="0"<?=$data['status'] == 0?"selected":"" ?>>Awesome</option>
-                      <option value="1">Great</option>
-                      <option value="2" >Good</option>
-                      <option value="3" >bad</option>
+      
 
-                  </select>  
-                    
-            </form>
-                      
-                                       
+<!-- add Review -->
+  <?php if(isset($_SESSION['auth'])){ ?>
+      <div class="container float-start mb-5">
+        <div class="row">
+          <div class="col-md-6 ">
+            <div class="card mt-5">
+              <div class="card-header bg-danger">
+                <h4 class="text-white">Add Review</h4>
+              </div>
+                <form action="functions/addreview.php" method="POST">
+                  <input type="hidden" name="prod_id" class="form-control" value="<?= $product['id'] ?>">
+                    <label for="rating">Rating:</label>
+                    <select name="rating" class="form-select ">
+                        <option value="1">1 star</option>
+                        <option value="2">2 stars</option>
+                        <option value="3">3 stars</option>
+                        <option value="4">4 stars</option>
+                        <option value="5">5 stars</option>
+                    </select>
+                    <input type="text" name="title" class="form-control" placeholder="Title">
+                    <label for="review_content">Enter your review:</label><br>
+                  <textarea name="review" class="form-control " rows="2" title="Review"></textarea>
                   
-              </div>
-              
-             
-              <div class="col-md-12">
+                  <button type="submit" class="btn btn-primary mt-2 w-100">Submit</button>
+                  
+                </form>
+                  </div>
                 
-                  <label  class="mb-0">Review</label>
-                  <textarea rows="3" required name="review" placeholder="Enter Your Review" class="form-control mb-2"></textarea>
-              </div>
-              
-              <div class="col-md-12">
-                <button type="submit" class="btn btn-primary" name="add_product_btn">Save</button>
               </div>
             </div>
-          </form>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div> -->
+  
+ <?php } ?>
+      
 
-<form method="POST" action="add_review.php">
-    <label for="review_content">Enter your review:</label><br>
-    <textarea id="review_content" name="review_content"></textarea><br>
-    <label for="rating">Rating:</label>
-    <select id="rating" name="rating">
-        <option value="1">1 star</option>
-        <option value="2">2 stars</option>
-        <option value="3">3 stars</option>
-        <option value="4">4 stars</option>
-        <option value="5">5 stars</option>
-    </select><br>
-    <input type="submit" value="Submit">
-</form>
-
-
-<!-- <div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="card">
-        <div class="card-header">
-          <h4>Add Review</h4>
-        </div>
-        <section class="account-form">
-
-          <form action="" method="post">
-            
-            <a href="product-view.php?get_id=<?= $get_id; ?>" class="option-btn">go back</a>
-            <p class="text-white bg-dark">review title <span>*</span></p>
-            <input type="text" name="title" required maxlength="50" placeholder="enter review title" class="box">
-            <p class="text-white bg-dark">review description</p>
-            <textarea name="description" class="box" placeholder="enter review description" maxlength="1000" cols="30" rows="10"></textarea>
-            <p class="text-white bg-dark">review rating <span>*</span></p>
-            <select name="rating" class="box" required>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-            <input type="submit" value="submit review" name="submit" class="btn btn-success">
-            
-          </form>
-
-        </section>  
-      </div>
-    </div>
-  </div>
-</div> -->
       <?php 
 
 
